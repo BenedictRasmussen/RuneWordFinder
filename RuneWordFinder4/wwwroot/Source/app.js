@@ -1,5 +1,4 @@
-﻿import $ from 'jquery';
-require('./lib');
+﻿require('./lib');
 
 document.getElementById("fillthis").innerHTML = getText();
 $('#fillthiswithjquery').html('Filled by Jquery!');
