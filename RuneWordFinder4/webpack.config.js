@@ -12,21 +12,30 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
-            'window.jQuery': 'jquery'
+            'window.jQuery': 'jquery',
+            Popper: ['popper.js', 'default']
         })
     ],
 
     module: {
         rules: [
             {
+                test: /\.css$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" }
+                    
+                ]
+            },
+            {
                 test: /\.js?$/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
+                    loader: 'babel-loader', options: {
+                        presets:
+                            ['@babel/preset-env']
                     }
                 }
-            }
+            },
         ]
     }
 };
