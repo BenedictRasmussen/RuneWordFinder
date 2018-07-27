@@ -1,5 +1,8 @@
 ﻿const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const extractCSS = new ExtractTextPlugin('allstyles.css');
 
 module.exports = {
     entry: './wwwroot/source/app.js',
@@ -9,6 +12,7 @@ module.exports = {
     },
 
     plugins: [
+        extractCSS,
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -21,11 +25,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" }
-                    
-                ]
+                use: extractCSS.extract(['css-loader?minimize'])
             },
             {
                 test: /\.js?$/,
@@ -36,6 +36,12 @@ module.exports = {
                     }
                 }
             },
+        ]
+    },
+
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin()
         ]
     }
 };
