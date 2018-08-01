@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "wbp": "webpack"
+    "wbp": "webpack",
+    "seed-setup": "seed-setup",
+    "seed-db": "seed --db-name RuneWordFinder --data ./seeds"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +33,8 @@
     "webpack-hot-middleware": "^2.20.0"
   },
   "dependencies": {
-    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "mongo-seeding": "^2.2.0",
+    "mongo-seeding-cli": "^2.2.0"
   }
 }
