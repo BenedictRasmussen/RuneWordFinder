@@ -13,7 +13,7 @@ stack was chosen primarily because I either had not worked with or had limited e
 ### Alright, that makes sense. Why is your main directory post-fixed with a 4?
 It's called iterative design. Theoretically, I would be working with a client and incorporating feedback on a regular basis.
 
-### The other three don't even start do they?
+### The other three don't even start, do they?
 Oh god no. Not even a little.
 
 # Setup
@@ -23,4 +23,4 @@ This project uses the [mongo-seeding](https://github.com/pkosiec/mongo-seeding "
 If you wish to seed the database programatically, there are some known issues getting webpack to package mongoose, another populer Mongo package that mongo-seeding relies on. Spend time at your own risk.
 
 ### Seeding local instance
-To seed a local instance of Mongo, run `npm run seed-db` to run a predefined seeding command.
+To seed a local instance of Mongo, run `npm run seed-db` to run a predefined seeding command. If you are using non-default configurations for your mongo instance (e.g. not using port 27017), you will need to peruse the documentation for mongo-seeding-cli at the link above and modify the command in `package.json`.
