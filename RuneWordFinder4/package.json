@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wbp": "webpack",
-    "seed-db": "seed --db-name RuneWordFinder --data ./seeds"
+    "seed-db": "seed --db-name RuneWordFinder --data ./seeds --drop-collection"
   },
   "keywords": [],
   "author": "",
