@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RuneWordFinder4.Models.Repository;
 using NLog;
+using RuneWordFinder4.Models;
 
 namespace RuneWordFinder4.Controllers
 {
@@ -15,10 +16,10 @@ namespace RuneWordFinder4.Controllers
             return View();
         }
 
-        public ActionResult List()
+        public IActionResult List()
         {
             log.Info("Entered HomeController.List()");
-            return View(dataService.FindRunes());
+            return Json(dataService.FindRunes());
         }
     }
 }

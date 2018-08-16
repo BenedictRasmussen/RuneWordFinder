@@ -34,6 +34,7 @@ namespace RuneWordFinder4
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
+                routes.MapRoute(name: "list", template: "{controller=Home}/{action=List}");
                 routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
