@@ -14,7 +14,6 @@ module.exports = {
 
     plugins: [
         extractCSS,
-        //,
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
