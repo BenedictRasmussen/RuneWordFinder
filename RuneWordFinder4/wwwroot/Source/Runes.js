@@ -10,12 +10,26 @@ const runes = [
 ];
 
 export default class RuneList extends React.Component {
-    constructor() {
-        super(this.props);
+    constructor(props) {
+        super(props);
     }
 
     componentWillMount = () => {
         this.selectedCheckboxes = new Set();
+    }
+
+    componentDidMount = () => {
+        //this.xhrRequest();
+        fetch('/Home/List').then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Unable to fetch /Home/List");
+            }
+        }).then(responseData =>  {
+            console.log("Rune data: ");
+            console.log(responseData);
+        })
     }
 
     toggleCheckbox = label => {
@@ -42,26 +56,16 @@ export default class RuneList extends React.Component {
         runes.map(this.createCheckbox)    
     )
 
-    controllerRequest() {
-        let xhr = new XMLHttpRequest();
-        xhr.open('get', '/Home/List', true);
-        xhr.onload = () => {
-            xhr.response.map(res => <p>{res}</p>)
-        }
-    }
     //https://visualstudiomagazine.com/articles/2016/06/01/processing-data.aspx
     render() {
-        let state = this.state;
-        console.log(state);
         return (
             <div>
+                <p> Fill out runes form:</p>
                 <form onSubmit={this.handleFormSubmit}>
                     {this.createCheckboxes()}
                     <button type="submit">Save</button>
                     <br />
                     <br />
-                    <h1>Controller Request</h1>
-                    <p>Temporarily disabled</p>
                 </form>
             </div>
         );

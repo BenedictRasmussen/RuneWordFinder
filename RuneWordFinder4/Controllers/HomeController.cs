@@ -12,14 +12,17 @@ namespace RuneWordFinder4.Controllers
 
         public IActionResult Index()
         {
-            log.Info("Entered HomeController.Index()");
+            log.Debug("Entered HomeController.Index()");
             return View();
         }
 
-        public IActionResult List()
+        
+        public ActionResult List()
         {
-            log.Info("Entered HomeController.List()");
-            return Json(dataService.FindRunes());
+            log.Debug("Entered HomeController.List()");
+            System.Collections.Generic.List<Runes> runes = dataService.FindRunes();
+            log.Debug("Runes collection has {0} objects", runes.Count);
+            return Json(runes);
         }
     }
 }
