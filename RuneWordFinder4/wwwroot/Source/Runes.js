@@ -1,17 +1,11 @@
 ﻿import * as React from 'react';
 import Checkbox from "./Checkbox";
-
-// TODO Populate using call to DB
-const runes = [
-    'El',
-    'Eld',
-    'Ith',
-    'Eth',
-];
+import { create } from 'domain';
 
 export default class RuneList extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {}
     }
 
     componentWillMount = () => {
@@ -19,16 +13,18 @@ export default class RuneList extends React.Component {
     }
 
     componentDidMount = () => {
-        //this.xhrRequest();
         fetch('/Home/List').then(response => {
             if (response.ok) {
                 return response.json();
             } else {
                 throw new Error("Unable to fetch /Home/List");
             }
-        }).then(responseData =>  {
+        }).then(responseData => {
             console.log("Rune data: ");
             console.log(responseData);
+            this.setState({
+                rune_data: responseData
+            });
         })
     }
 
@@ -48,21 +44,26 @@ export default class RuneList extends React.Component {
         }
     }
 
-    createCheckbox = label => (
-        <Checkbox label={label} handleCheckboxChange={this.toggleCheckbox} key={label} />
+    createCheckbox = rune => (
+        <Checkbox label={rune.name} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
     )
 
     createCheckboxes = () => (
-        runes.map(this.createCheckbox)    
+        this.state.rune_data.map(this.createCheckbox)    
     )
 
     //https://visualstudiomagazine.com/articles/2016/06/01/processing-data.aspx
     render() {
+        console.log("STATE ready = " + (this.state.rune_data !== null && this.state.rune_data !== undefined));
         return (
             <div>
                 <p> Fill out runes form:</p>
                 <form onSubmit={this.handleFormSubmit}>
-                    {this.createCheckboxes()}
+                    {
+                        (this.state.rune_data !== null && this.state.rune_data !== undefined) ?
+                            this.createCheckboxes() :
+                            <p>Loading runes...</p>
+                    }
                     <button type="submit">Save</button>
                     <br />
                     <br />
