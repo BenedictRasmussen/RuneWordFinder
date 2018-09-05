@@ -1,17 +1,29 @@
 # RuneWordFinder
-A toy application for discovering which rune words can be made in Diablo II.
+A toy application for discovering which Runewords can be made in Diablo II.
 
-# Why?
-Because I am bad at inventory management and can never remember which runes go to which rune words.
+## What and Why?
 
-## ...you realize making this takes way more time than googling it, right?
-Fine. In reality, I had been searching for a mini-project to pursue while working with a new tech stack.
+### What is a Runeword?
+In the game Diablo II, slain enemies have a chance of dropping a magical rune. There are a variety of runes that have different properties. Runes may be added to a weapon or a piece of armor with sockets in them. If the correct runes are socketed into an item in the correct order, a Runeword is created. A Runeword is an extremely powerful magic item that often has a large number of magical properties and is more powerful than most other magic items of a similar level.
 
-This project is being built with **React** for its front-end, **C#** for the backend, and **Mongo** as it's database. This particular \
-stack was chosen primarily because I either had not worked with or had limited experience with each technology.
+### Why a Runeword Finder?
+As the player progresses through the game, the player can amass a large number of runes, and it can be difficult to keep track of which runes can make which Runewords. Online resources exist that list Runewords and their required runes, but often the information is spread across multiple pages and does not take into account the runes the player owns. The purpose of this application is to make finding which Runewords the player can create simpler by starting with the runes the player owns and returning a list of which Runewords a player can make.
 
-## Alright, that makes sense. Why is your main directory post-fixed with a 4?
-It's called iterative design. Theoretically, I would be working with a client and incorporating feedback on a regular basis.
+# Setup
 
-## The other three don't even start do they?
-Oh god no. Not even a little.
+## Stack
+**Front**: React
+
+**Back**: C#
+
+**Database**: Mongo
+
+**Framework**: ASP.Net
+
+## Seeding Mongo
+This project uses the [mongo-seeding](https://github.com/pkosiec/mongo-seeding "mongo-seeding github") repository to seed the database. The repository has a gob of features, but this project specifically takes advantage of the [cli sub repository](https://github.com/pkosiec/mongo-seeding/tree/master/cli "mongo-seeding-cli github").
+
+If you wish to seed the database programatically, there are some known issues getting webpack to package mongoose, another populer Mongo package that mongo-seeding relies on. Spend time at your own risk.
+
+### Seeding local instance
+To seed a local instance of Mongo, run `npm run seed-db` to run a predefined seeding command. If you are using non-default configurations for your mongo instance (e.g. not using port 27017), you will need to peruse the documentation for mongo-seeding-cli at the link above and modify the command in `package.json`.

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "el",
+    "image": "images/runes/el.jpg",
+    "alt-text": "El rune",
+    "weapon": "+50 to attack rating, +1 to light radius",
+    "armor": "+1 to light radius",
+    "shield": "Fire resist 35%",
+    "level": 11
+  },
+  {
+    "name": "eld",
+    "image": "images/runes/eld.jpg",
+    "alt-text": "Eld rune",
+    "weapon": "+75% damage vs Undead",
+    "armor": "15% lower stamina drain",
+    "shield": "7% increased chance of blocking",
+    "level": 11
+  },
+  {
+    "name": "tir",
+    "image": "images/runes/tir.jpg",
+    "alt-text": "Tir rune",
+    "weapon": "+2 mana after each kill",
+    "armor": "+2 mana after each kill",
+    "shield": "+2 mana after each kill",
+    "level": 13
+  },
+  {
+    "name": "nef",
+    "image": "images/runes/nef.jpg",
+    "alt-text": "Nef rune",
+    "weapon": "Knockback",
+    "armor": "+30 defense vs missile",
+    "shield": "+30 defense vs missile",
+    "level": 13
+  },
+  {
+    "name": "eth",
+    "image": "images/runes/eth.jpg",
+    "alt-text": "Eth rune",
+    "weapon": "-25% To Target Defense",
+    "armor": "Regenerate Mana 15%",
+    "shield": "Regenerate Mana 15%",
+    "level": 15
+  },
+  {
+    "name": "ith",
+    "image": "images/runes/ith.jpg",
+    "alt-text": "Ith rune",
+    "weapon": "+9 To Maximum Damage",
+    "armor": "15% Damage Taken Goes to Mana",
+    "shield": "15% Damage Taken Goes to Mana",
+    "level": 15
+  },
+  {
+    "name": "tal",
+    "image": "images/runes/tal.jpg",
+    "alt-text": "Tal rune",
+    "weapon": "+75 Poison Damage Over 5 Seconds",
+    "armor": "Poison Resist 30%",
+    "shield": "Poison Resist 35%",
+    "level": 17
+  },
+  {
+    "name": "ral",
+    "image": "images/runes/ral.jpg",
+    "alt-text": "Ral rune",
+    "weapon": "Adds 5-30 Fire Damage",
+    "armor": "Fire Resist 30%",
+    "shield": "Fire Resist 35%",
+    "level": 19
+  }
+]

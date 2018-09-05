@@ -1,20 +1,14 @@
-﻿import ES6Lib from './es6codelib';
-import 'bootstrap/dist/css/bootstrap.min.css';
+﻿import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/site.css';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Counter from './reactcomponent';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+import RuneWordFinder from './RuneWordFinder';
 
 ReactDOM.render(
-    <Counter />,
-    document.getElementById('basicreactcomponent')
+    <RuneWordFinder />,
+    document.getElementById('runewordapp')
 );
-
-/*
-$('#fillthiswithjquery').html('Filled by Jquery!');
-let myES6Object = new ES6Lib();
-$('#fillthiswithes6lib').html(myES6Object.getData());
-*/
 
 module.hot.accept();
