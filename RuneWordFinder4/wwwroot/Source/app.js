@@ -8,7 +8,7 @@ import RuneWordFinder from './RuneWordFinder';
 
 ReactDOM.render(
     <RuneWordFinder />,
-    document.getElementById('basicreactcomponent')
+    document.getElementById('runewordapp')
 );
 
 module.hot.accept();

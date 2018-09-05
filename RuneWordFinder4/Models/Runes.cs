@@ -12,7 +12,6 @@ namespace RuneWordFinder4.Models
         [BsonElement("name")]
         public String Name { get; set; }
         [BsonElement("image")]
-        //[DataType(DataType.ImageUrl)]
         public string Image { get; set; }
         [BsonElement("alt-text")]
         public String AltText { get; set; }

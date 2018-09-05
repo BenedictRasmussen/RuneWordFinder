@@ -1,6 +1,6 @@
-﻿// http://react.tips/checkboxes-in-react/
-import * as React from 'react';
+﻿import * as React from 'react';
 
+// http://react.tips/checkboxes-in-react/
 export default class Checkbox extends React.Component {
     state = {
         isChecked: false,
@@ -31,9 +31,3 @@ export default class Checkbox extends React.Component {
         );
     }
 }
-/*
-Checkbox.propTypes = {
-    label: PropTypes.string.isRequired,
-    handleCheckboxChange: PropTypes.func.isRequired,
-};
-*/

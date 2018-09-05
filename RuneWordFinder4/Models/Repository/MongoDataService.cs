@@ -6,9 +6,8 @@ using NLog;
 namespace RuneWordFinder4.Models.Repository
 {
     /// <summary>
+    /// Much of the DataService implementation was inspired by
     /// https://samueleresca.net/2015/08/querying-mongodb-with-asp-net-mvc/
-    /// 
-    /// TODO: Cache some results
     /// </summary>
     public class MongoDataService
     {

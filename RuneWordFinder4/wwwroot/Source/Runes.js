@@ -52,7 +52,6 @@ export default class RuneList extends React.Component {
         this.state.rune_data.map(this.createCheckbox)    
     )
 
-    //https://visualstudiomagazine.com/articles/2016/06/01/processing-data.aspx
     render() {
         console.log("STATE ready = " + (this.state.rune_data !== null && this.state.rune_data !== undefined));
         return (
