@@ -1,0 +1,35 @@
+﻿[
+  {
+    "name": "Stealth",
+    "type":  "Armor",
+    "runeName": "TalEth",
+    "runes": [ "tal", "eth" ],
+    "stats": [
+      "Magic Damage Reduced By 3",
+      "+6 To Dexterity",
+      "+15 To Maximum Stamina",
+      "Poison Resist +30%",
+      "Regenerate Mana 15%",
+      "25% Faster Run/Walk",
+      "25% Faster Cast Rate",
+      "25% Faster Hit Recovery"
+    ]
+  },
+  {
+    "name": "Malice",
+    "type": "Polearms",
+    "runeName": "IthElEth",
+    "runes": [ "ith", "el", "eth" ],
+    "stats": [
+      "+33% Enhanced Damage",
+      "+9 To Maximum Damage",
+      "100% Chance Of Open Wounds",
+      "-25% Target Defense",
+      "-100 To Monster Defense per Hit",
+      "Prevent Monster Heal",
+      "+50 To Attack Rating",
+      "Drain Life -5"
+    ]
+
+  }
+]
