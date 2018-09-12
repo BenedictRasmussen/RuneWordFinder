@@ -28,28 +28,32 @@ export default class RuneList extends React.Component {
         })
     }
 
-    toggleCheckbox = label => {
-        if (this.selectedCheckboxes.has(label)) {
-            this.selectedCheckboxes.delete(label);
+    // If the label already exists, remove the checkbox from the list of selected boxes. Otherwise, add the label.
+    toggleCheckbox = runeName => {
+        if (this.selectedCheckboxes.has(runeName)) {
+            this.selectedCheckboxes.delete(runeName);
         } else {
-            this.selectedCheckboxes.add(label);
+            this.selectedCheckboxes.add(runeName);
         }
     }
 
     handleFormSubmit = formSubmitEvent => {
         formSubmitEvent.preventDefault();
 
-        for (const checkbox of this.selectedCheckboxes) {
-            console.log(checkbox, ' is selected.')
+        // TODO: https://stackoverflow.com/questions/44925223/how-to-pass-data-to-controller-using-fetch-api-in-asp-net-core
+        for (const runeName of this.selectedCheckboxes) {
+            console.log(runeName, ' is selected.')
         }
+
+        //TODO Send selected checkboxes (a set of rune names as strings) to Controller
     }
 
     createCheckbox = rune => (
-        <Checkbox label={rune.name} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
+        <Checkbox rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
     )
 
     createCheckboxes = () => (
-        this.state.rune_data.map(this.createCheckbox)    
+        this.state.rune_data.map(this.createCheckbox)
     )
 
     render() {
