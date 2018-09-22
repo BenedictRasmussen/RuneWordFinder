@@ -2,6 +2,7 @@
 using RuneWordFinder4.Models.Repository;
 using NLog;
 using RuneWordFinder4.Models;
+using System.Collections.Generic;
 
 namespace RuneWordFinder4.Controllers
 {
@@ -23,6 +24,14 @@ namespace RuneWordFinder4.Controllers
             System.Collections.Generic.List<Runes> runes = dataService.FindRunes();
             log.Debug("Runes collection has {0} objects", runes.Count);
             return Json(runes);
+        }
+
+        [HttpPost]
+        public IActionResult Search([FromBody] List<string> values)
+        {
+            log.Debug("Entered HomeController.Search()");
+            values.ForEach(str=>log.Info(str));
+            return Json("");
         }
     }
 }
