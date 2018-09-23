@@ -1,6 +1,7 @@
 ﻿import * as React from 'react';
 import Checkbox from "./Checkbox";
 import { create } from 'domain';
+import { URLSearchParams } from 'url';
 
 export default class RuneList extends React.Component {
     constructor(props) {
@@ -31,21 +32,32 @@ export default class RuneList extends React.Component {
     // If the label already exists, remove the checkbox from the list of selected boxes. Otherwise, add the label.
     toggleCheckbox = runeName => {
         if (this.selectedCheckboxes.has(runeName)) {
+            console.log("Unchecking " + runeName)
             this.selectedCheckboxes.delete(runeName);
         } else {
+            console.log("Checking " + runeName)
             this.selectedCheckboxes.add(runeName);
         }
     }
 
     handleFormSubmit = formSubmitEvent => {
         formSubmitEvent.preventDefault();
+        console.log("Sending for search: " + JSON.stringify(Array.from(this.selectedCheckboxes)));
 
-        // TODO: https://stackoverflow.com/questions/44925223/how-to-pass-data-to-controller-using-fetch-api-in-asp-net-core
-        for (const runeName of this.selectedCheckboxes) {
-            console.log(runeName, ' is selected.')
-        }
-
-        //TODO Send selected checkboxes (a set of rune names as strings) to Controller
+        // https://stackoverflow.com/questions/44925223/how-to-pass-data-to-controller-using-fetch-api-in-asp-net-core
+        fetch('/Home/Search', {
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            body: JSON.stringify(Array.from(this.selectedCheckboxes))
+        }).then(response => {
+            if (response.ok) {
+                console.log("Search response OKAY!")
+            } else {
+                console.log("Search failed!")
+            }
+        })
     }
 
     createCheckbox = rune => (
