@@ -17,11 +17,10 @@ namespace RuneWordFinder4.Controllers
             return View();
         }
 
-        
         public ActionResult List()
         {
             log.Debug("Entered HomeController.List()");
-            System.Collections.Generic.List<Runes> runes = dataService.FindRunes();
+            List<Runes> runes = dataService.FindRunes();
             log.Debug("Runes collection has {0} objects", runes.Count);
             return Json(runes);
         }
