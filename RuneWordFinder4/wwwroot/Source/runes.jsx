@@ -1,5 +1,5 @@
 ﻿import * as React from 'react';
-import Checkbox from "./Checkbox";
+import Checkbox from "./checkbox.jsx";
 import { create } from 'domain';
 import { URLSearchParams } from 'url';
 

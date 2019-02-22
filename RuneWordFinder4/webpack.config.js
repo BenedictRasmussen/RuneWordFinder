@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const extractCSS = new ExtractTextPlugin('allstyles.css');
 
 module.exports = {
-    entry: { 'main': './wwwroot/source/app.js' },
+    entry: { 'main': './wwwroot/source/app.jsx' },
     output: {
         path: path.resolve(__dirname, 'wwwroot/dist'),
         filename: 'bundle.js',
@@ -29,7 +29,7 @@ module.exports = {
                 use: extractCSS.extract(['css-loader?minimize'])
             },
             {
-                test: /\.js?$/,
+                test: /\.jsx?$/,
                 use: {
                     loader: 'babel-loader', options: {
                         presets:
