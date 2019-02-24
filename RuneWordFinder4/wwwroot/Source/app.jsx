@@ -3,8 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 import RuneWordFinder from './runeWordFinder.jsx';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../css/site.css';
+import '../scss/layout.scss';
 
 ReactDOM.render(
     <RuneWordFinder />,
