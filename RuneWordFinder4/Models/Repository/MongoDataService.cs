@@ -12,13 +12,17 @@ namespace RuneWordFinder4.Models.Repository
     public class MongoDataService
     {
         private static readonly Logger log = LogManager.GetCurrentClassLogger();
-        private const string Collection = "runes";
+        private const string RunesCollectionName = "runes";
         internal MongoRepo repo = new MongoRepo("mongodb://127.0.0.1:27017", "RuneWordFinder");
 
         public IMongoCollection<Runes> RuneCollection;
+        public IMongoCollection<Runewords> RunewordCollection;
 
-        public MongoDataService() => 
-            RuneCollection = repo.Database.GetCollection<Runes>(Collection);
+        public MongoDataService()
+        {
+            RuneCollection = repo.Database.GetCollection<Runes>(RunesCollectionName);
+
+        }
 
         /// <summary>
         /// Given the name of a rune, return the associated document from the Runes collection
@@ -42,5 +46,9 @@ namespace RuneWordFinder4.Models.Repository
             return runeList;
         }
 
+        public List<Runewords> GetRuneWords()
+        {
+            return null;
+        }
     }
 }
