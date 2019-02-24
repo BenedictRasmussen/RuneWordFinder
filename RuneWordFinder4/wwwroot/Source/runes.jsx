@@ -3,6 +3,8 @@ import Checkbox from "./checkbox.jsx";
 import { create } from 'domain';
 import { URLSearchParams } from 'url';
 
+import '../scss/runes.scss';
+
 export default class RuneList extends React.Component {
     constructor(props) {
         super(props);
@@ -71,9 +73,10 @@ export default class RuneList extends React.Component {
     render() {
         console.log("STATE ready = " + (this.state.rune_data !== null && this.state.rune_data !== undefined));
         return (
-            <div>
-                <p> Fill out runes form:</p>
-                <form onSubmit={this.handleFormSubmit}>
+            <div id="runes-grid">
+                <div id="rune-options">
+                    <p> Fill out runes form:</p>
+                    <form onSubmit={this.handleFormSubmit}>
                     {
                         (this.state.rune_data !== null && this.state.rune_data !== undefined) ?
                             this.createCheckboxes() :
@@ -82,7 +85,11 @@ export default class RuneList extends React.Component {
                     <button type="submit">Save</button>
                     <br />
                     <br />
-                </form>
+                    </form>
+                </div>
+                <div id="runeword-results">
+
+                </div>
             </div>
         );
     }

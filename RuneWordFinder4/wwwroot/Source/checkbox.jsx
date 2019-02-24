@@ -23,7 +23,7 @@ export default class Checkbox extends React.Component {
 
         return (
             <div className="checkbox">
-                <img src={ "../" + this.props.rune.image }></img>
+                <img className="rune-image" src={ "../" + this.props.rune.image }></img>
                 <label>
                     <input type="checkbox" value={runeName} checked={isChecked}
                         onChange={this.toggleCheckboxChange} />
