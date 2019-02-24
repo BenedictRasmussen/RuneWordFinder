@@ -25,8 +25,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: extractCSS.extract(['css-loader?minimize'])
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    extractCSS.extract(['css-loader?minimize']),
+                    "sass-loader"
+                ]
             },
             {
                 test: /\.jsx?$/,
