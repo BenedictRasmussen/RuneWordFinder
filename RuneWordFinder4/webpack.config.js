@@ -27,9 +27,13 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
-                    extractCSS.extract(['css-loader?minimize']),
-                    "sass-loader"
+                    {
+                        loader: "style-loader"
+                    }, {
+                        loader: "css-loader"
+                    }, {
+                        loader: "sass-loader"
+                    }
                 ]
             },
             {
