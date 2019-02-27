@@ -13,6 +13,7 @@ namespace RuneWordFinder4.Models.Repository
     {
         private static readonly Logger log = LogManager.GetCurrentClassLogger();
         private const string RunesCollectionName = "runes";
+        private const string RunewordsCollectionName = "runewords";
         internal MongoRepo repo = new MongoRepo("mongodb://127.0.0.1:27017", "RuneWordFinder");
 
         public IMongoCollection<Runes> RuneCollection;
@@ -21,7 +22,6 @@ namespace RuneWordFinder4.Models.Repository
         public MongoDataService()
         {
             RuneCollection = repo.Database.GetCollection<Runes>(RunesCollectionName);
-
         }
 
         /// <summary>
@@ -38,17 +38,23 @@ namespace RuneWordFinder4.Models.Repository
         }
 
         /// <returns>Returns all rune documents in the Runes collection</returns>
-        public List<Runes> FindRunes()
+        public List<Runes> GetRunes()
         {
-            log.Info("MongoDataService::FindRunes()");
+            log.Info("MongoDataService::GetRunes()");
             List<Runes> runeList = RuneCollection.Find(new BsonDocument()).ToList<Runes>();
-            log.Debug("MongoDataService::FindRunes() returning {0} elements", runeList.Count);
+            log.Debug("MongoDataService::GetRunes() returning {0} elements", runeList.Count);
             return runeList;
         }
 
         public List<Runewords> GetRuneWords()
         {
-            return null;
+            log.Info("MongoDataService::GetRuneWords()");
+            if (RunewordCollection == null)
+            {
+                RunewordCollection = repo.Database.GetCollection<Runewords>(RunewordsCollectionName);
+                log.Info("Database contained runewords: " + RunewordCollection);
+            }
+            return RunewordCollection.Find(new BsonDocument()).ToList<Runewords>(); ;
         }
     }
 }
