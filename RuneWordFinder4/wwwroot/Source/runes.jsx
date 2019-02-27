@@ -88,7 +88,7 @@ export default class RuneList extends React.Component {
                     </form>
                 </div>
                 <div id="runeword-results">
-
+                    <span>Placeholder for runeword results...</span>
                 </div>
             </div>
         );

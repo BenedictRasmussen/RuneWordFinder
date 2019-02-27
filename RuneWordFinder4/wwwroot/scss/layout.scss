@@ -17,7 +17,7 @@ body {
 .container-grid {
     height: inherit;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         'header'
         'content'
         'footer';
@@ -25,13 +25,14 @@ body {
 }
 
 #header {
-    grid-area: header;   
+    grid-area: header;
     background-color: maroon;
     color: white;
 }
 
 #content {
     grid-area: content;
+    overflow: auto;
 }
 
 #footer {
