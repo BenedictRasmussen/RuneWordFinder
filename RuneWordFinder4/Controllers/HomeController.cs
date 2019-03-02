@@ -2,6 +2,7 @@
 using RuneWordFinder4.Models.Repository;
 using NLog;
 using RuneWordFinder4.Models;
+using System.Collections.Generic;
 
 namespace RuneWordFinder4.Controllers
 {
@@ -16,13 +17,41 @@ namespace RuneWordFinder4.Controllers
             return View();
         }
 
-        
         public ActionResult List()
         {
             log.Debug("Entered HomeController.List()");
-            System.Collections.Generic.List<Runes> runes = dataService.FindRunes();
+            List<Runes> runes = dataService.GetRunes();
             log.Debug("Runes collection has {0} objects", runes.Count);
             return Json(runes);
+        }
+
+        [HttpPost]
+        public IActionResult Search([FromBody] List<string> values)
+        {
+            log.Debug("Entered HomeController.Search()");
+            values.ForEach(str=>log.Info(str));
+            List<Runewords> runewords = dataService.GetRuneWords();
+            List<Runewords> matchedRunewords = new List<Runewords>();
+
+            foreach (Runewords runeword in runewords) {
+                bool match = true;
+                foreach (string rune in runeword.Runes)
+                {
+                   if (!values.Contains(rune))
+                    {
+                        match = false;
+                        break;
+                    }
+                }
+
+                if (match)
+                {
+                    log.Info("Runeword found: " + runeword.Name);
+                    matchedRunewords.Add(runeword);
+                }
+            }
+
+            return Json(matchedRunewords);
         }
     }
 }

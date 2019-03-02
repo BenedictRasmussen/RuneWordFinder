@@ -1,0 +1,15 @@
+﻿#runes-grid {
+    display: grid;
+    // col 1 and 4 used to create margins
+    grid-template-columns: 10rem 1fr 1fr 10rem;
+    height: 100%;
+}
+
+#rune-options {
+    grid-column: 2;
+}
+
+#runeword-results {
+    grid-column: 3;
+    background-color: lightgray;
+}
