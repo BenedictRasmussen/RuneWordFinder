@@ -4,7 +4,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <nav>
-                This is a header
+                <h1>Runeword Finder</h1>
             </nav>
         )
     }

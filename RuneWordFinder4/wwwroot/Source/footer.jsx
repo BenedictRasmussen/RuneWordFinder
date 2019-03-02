@@ -4,7 +4,8 @@ export default class Footer extends React.Component {
     render() {
         return (
             <nav>
-                This is a footer
+                Diablo 2 runeword finder.
+                Developed by <a href="https://github.com/BenedictRasmussen/RuneWordFinder">Benedict Rasmussen</a>
             </nav>
         )
     }

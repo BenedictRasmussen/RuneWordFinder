@@ -1,7 +1,8 @@
 ﻿import * as React from 'react';
-import Checkbox from "./checkbox.jsx";
+import Checkbox from './checkbox.jsx';
 import { create } from 'domain';
 import { URLSearchParams } from 'url';
+import Runeword from './runeword.jsx'
 
 import '../scss/runes.scss';
 
@@ -56,19 +57,33 @@ export default class RuneList extends React.Component {
         }).then(response => {
             if (response.ok) {
                 console.log("Search response OKAY!")
+                return response.json();
             } else {
                 console.log("Search failed!")
+                // TODO display error?
             }
+        }).then(responseData => {
+          console.log("Runeword data: ");
+          console.log(responseData);
+          this.setState({
+              runeword_data: responseData
+          })
         })
     }
 
-    createCheckbox = rune => (
-        <Checkbox rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
+    createCheckboxes = () => (
+        this.state.rune_data.map(rune =>
+          <Checkbox rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
+        )
     )
 
-    createCheckboxes = () => (
-        this.state.rune_data.map(this.createCheckbox)
-    )
+    renderRunewordResults = () => {
+        if (this.state.runeword_data !== null && this.state.runeword_data !== undefined) {
+            return this.state.runeword_data.map(runeword => <Runeword runeword={runeword}></Runeword>)
+        }
+
+        return (<span>Waiting for runeword search...</span>);
+    }
 
     render() {
         console.log("STATE ready = " + (this.state.rune_data !== null && this.state.rune_data !== undefined));
@@ -77,18 +92,18 @@ export default class RuneList extends React.Component {
                 <div id="rune-options">
                     <p> Fill out runes form:</p>
                     <form onSubmit={this.handleFormSubmit}>
-                    {
-                        (this.state.rune_data !== null && this.state.rune_data !== undefined) ?
-                            this.createCheckboxes() :
-                            <p>Loading runes...</p>
-                    }
-                    <button type="submit">Save</button>
-                    <br />
-                    <br />
+                        {
+                            (this.state.rune_data !== null && this.state.rune_data !== undefined) ?
+                                this.createCheckboxes() :
+                                <p>Loading runes...</p>
+                        }
+                        <button type="submit">Save</button>
+                        <br />
+                        <br />
                     </form>
                 </div>
                 <div id="runeword-results">
-                    <span>Placeholder for runeword results...</span>
+                    { this.renderRunewordResults() }
                 </div>
             </div>
         );

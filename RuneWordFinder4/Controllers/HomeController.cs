@@ -31,6 +31,7 @@ namespace RuneWordFinder4.Controllers
             log.Debug("Entered HomeController.Search()");
             values.ForEach(str=>log.Info(str));
             List<Runewords> runewords = dataService.GetRuneWords();
+            List<Runewords> matchedRunewords = new List<Runewords>();
 
             foreach (Runewords runeword in runewords) {
                 bool match = true;
@@ -46,10 +47,11 @@ namespace RuneWordFinder4.Controllers
                 if (match)
                 {
                     log.Info("Runeword found: " + runeword.Name);
+                    matchedRunewords.Add(runeword);
                 }
             }
 
-            return Json("");
+            return Json(matchedRunewords);
         }
     }
 }
