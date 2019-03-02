@@ -7,7 +7,8 @@ export default class Checkbox extends React.Component {
     }
 
     toggleCheckboxChange = () => {
-        const { handleCheckboxChange, label } = this.props;
+        const { handleCheckboxChange, rune } = this.props;
+        const label = rune.name;
 
         this.setState(({ isChecked }) => ({
                 isChecked: !isChecked,
@@ -17,15 +18,16 @@ export default class Checkbox extends React.Component {
     }
 
     render() {
-        const { label } = this.props;
+        const runeName = this.props.rune.name;
         const { isChecked } = this.state;
 
         return (
             <div className="checkbox">
+                <img className="rune-image" src={ "../" + this.props.rune.image }></img>
                 <label>
-                    <input type="checkbox" value={label} checked={isChecked}
+                    <input type="checkbox" value={runeName} checked={isChecked}
                         onChange={this.toggleCheckboxChange} />
-                    {label}
+                    {runeName}
                 </label>
             </div>
         );

@@ -1,0 +1,47 @@
+﻿/* Generic page layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+}
+
+#runewordapp {
+    height: inherit;
+}
+
+.container-grid {
+    height: inherit;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'content'
+        'footer';
+    grid-template-rows: 3rem 1fr 2rem;
+}
+
+#header {
+    grid-area: header;
+    background-color: maroon;
+    color: white;
+}
+
+#content {
+    grid-area: content;
+    overflow: auto;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: slategrey;
+}
+
+/* Rune checkboxes */
+.rune-image {
+    width: 25px;
+    height: 25px;
+}
