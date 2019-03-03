@@ -9,14 +9,9 @@ import '../scss/runes.scss';
 export default class RuneList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
-    }
-
-    componentWillMount = () => {
         this.selectedCheckboxes = new Set();
     }
 
-    // TODO does this make sense? wait for component to mount, then immediately re-render the page?
     componentDidMount = () => {
         fetch('/Home/List').then(response => {
             if (response.ok) {
