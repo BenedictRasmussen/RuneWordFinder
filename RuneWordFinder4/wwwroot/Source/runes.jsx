@@ -10,6 +10,10 @@ export default class RuneList extends React.Component {
     constructor(props) {
         super(props);
         this.selectedCheckboxes = new Set();
+        this.state = {
+            rune_data: null,
+            runeword_data: null
+        }
     }
 
     componentDidMount = () => {
@@ -26,17 +30,6 @@ export default class RuneList extends React.Component {
                 rune_data: responseData
             });
         })
-    }
-
-    // If the label already exists, remove the checkbox from the list of selected boxes. Otherwise, add the label.
-    toggleCheckbox = runeName => {
-        if (this.selectedCheckboxes.has(runeName)) {
-            console.log("Unchecking " + runeName)
-            this.selectedCheckboxes.delete(runeName);
-        } else {
-            console.log("Checking " + runeName)
-            this.selectedCheckboxes.add(runeName);
-        }
     }
 
     handleFormSubmit = formSubmitEvent => {
@@ -67,35 +60,40 @@ export default class RuneList extends React.Component {
         })
     }
 
-    createCheckboxes = () => (
-        this.state.rune_data.map(rune =>
-          <Checkbox rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
-        )
-    )
+    // If the label already exists, remove the checkbox from the list of selected boxes. Otherwise, add the label.
+    toggleCheckbox = runeName => {
+        this.selectedCheckboxes.has(runeName) ?
+            this.selectedCheckboxes.delete(runeName) : this.selectedCheckboxes.add(runeName);
+    }
+
+    renderRuneOptions = () => {
+        if (this.state.rune_data !== null) {
+            return this.state.rune_data.map(
+                rune => <Checkbox rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
+            )
+        }
+        // TODO Swap load out: https://codepen.io/Manoz/pen/pydxK/
+        return (<p>Loading runes...</p>);
+    }
 
     renderRunewordResults = () => {
-        if (this.state.runeword_data !== null && this.state.runeword_data !== undefined) {
-            return this.state.runeword_data.map(runeword => <Runeword runeword={runeword}></Runeword>)
+        if (this.state.runeword_data !== null) {
+            return this.state.runeword_data.map(
+                runeword => <Runeword runeword={runeword}></Runeword>
+            )
         }
 
         return (<span>Waiting for runeword search...</span>);
     }
 
     render() {
-        console.log("STATE ready = " + (this.state.rune_data !== null && this.state.rune_data !== undefined));
         return (
             <div id="runes-grid">
                 <div id="rune-options">
                     <p> Fill out runes form:</p>
                     <form onSubmit={this.handleFormSubmit}>
-                        {
-                            (this.state.rune_data !== null && this.state.rune_data !== undefined) ?
-                                this.createCheckboxes() :
-                                <p>Loading runes...</p>
-                        }
+                        { this.renderRuneOptions() }
                         <button type="submit">Save</button>
-                        <br />
-                        <br />
                     </form>
                 </div>
                 <div id="runeword-results">
