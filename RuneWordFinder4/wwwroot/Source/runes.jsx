@@ -1,7 +1,5 @@
 ﻿import * as React from 'react';
 import Checkbox from './checkbox.jsx';
-import { create } from 'domain';
-import { URLSearchParams } from 'url';
 import Runeword from './runeword.jsx'
 
 import '../scss/runes.scss';
@@ -21,7 +19,7 @@ export default class RuneList extends React.Component {
             if (response.ok) {
                 return response.json();
             } else {
-                throw new Error("Unable to fetch /Home/List");
+                throw new Error("Unable to fetch /Home/List (" + response.status + ")", response.statusText);
             }
         }).then(responseData => {
             console.log("Rune data: ");
@@ -48,8 +46,7 @@ export default class RuneList extends React.Component {
                 console.log("Search response OKAY!")
                 return response.json();
             } else {
-                console.log("Search failed!")
-                // TODO display error?
+                throw new Error("Failed to complete runeword search (" + response.status + ")", response.statusText)
             }
         }).then(responseData => {
           console.log("Runeword data: ");
