@@ -52,9 +52,9 @@ module.exports = {
         ]
     },
 
-    optimization: {
-        minimizer: [
-            new UglifyJsPlugin()
-        ]
-    }
+    // optimization: {
+    //     minimizer: [
+    //         new UglifyJsPlugin()
+    //     ]
+    // }
 };
