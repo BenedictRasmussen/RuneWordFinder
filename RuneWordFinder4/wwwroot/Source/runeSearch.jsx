@@ -1,5 +1,5 @@
 ﻿import * as React from 'react';
-import Checkbox from './checkbox.jsx';
+import Rune from './rune.jsx';
 import Runeword from './runeword.jsx'
 
 import '../scss/runes.scss';
@@ -66,7 +66,7 @@ export default class RuneList extends React.Component {
     renderRuneOptions = () => {
         if (this.state.rune_data !== null) {
             return this.state.rune_data.map(
-                rune => <Checkbox rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
+                rune => <Rune rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
             )
         }
         // TODO Swap load out: https://codepen.io/Manoz/pen/pydxK/

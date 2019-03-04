@@ -2,7 +2,7 @@ import React from 'react';
 
 import Footer from './footer.jsx';
 import Header from './header.jsx';
-import Runes from './runes.jsx';
+import RuneSearch from './runeSearch.jsx';
 
 // RuneWordFinder sets up the layout of the page and adds the content.
 const RuneWordFinder = () => (
@@ -11,7 +11,7 @@ const RuneWordFinder = () => (
             <Header></Header>
         </div>
         <div id="content">
-            <Runes/>
+            <RuneSearch></RuneSearch>
         </div>
         <div id="footer">
             <Footer></Footer>
