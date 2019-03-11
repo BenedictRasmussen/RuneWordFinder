@@ -2,7 +2,7 @@
 import Rune from './rune.jsx';
 import Runeword from './runeword.jsx'
 
-import '../scss/runes.scss';
+import '../../scss/runes.scss';
 
 export default class RuneList extends React.Component {
     constructor(props) {
