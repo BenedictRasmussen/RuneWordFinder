@@ -2,10 +2,10 @@ import React from 'react';
 
 import Footer from './footer.jsx';
 import Header from './header.jsx';
-import RuneSearch from './runeSearch.jsx';
+import RuneSearch from './runeSearch/runeSearch.jsx';
 
-// RuneWordFinder sets up the layout of the page and adds the content.
-const RuneWordFinder = () => (
+// Main sets up the layout of the page and adds the content.
+const Main = () => (
     <div className="container-grid">
         <div id="header">
             <Header></Header>
@@ -18,4 +18,4 @@ const RuneWordFinder = () => (
         </div>
     </div>
 )
-export default RuneWordFinder;
+export default Main;
