@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import RuneWordFinder from './main.jsx';
+import Main from './main.jsx';
 
 import '../scss/layout.scss';
 
