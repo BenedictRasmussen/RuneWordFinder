@@ -1,28 +1,25 @@
 ﻿import * as React from 'react';
-import Checkbox from './checkbox.jsx';
-import { create } from 'domain';
-import { URLSearchParams } from 'url';
+import Rune from './rune.jsx';
 import Runeword from './runeword.jsx'
 
-import '../scss/runes.scss';
+import '../../scss/runes.scss';
 
 export default class RuneList extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
-    }
-
-    componentWillMount = () => {
         this.selectedCheckboxes = new Set();
+        this.state = {
+            rune_data: null,
+            runeword_data: null
+        }
     }
 
-    // TODO does this make sense? wait for component to mount, then immediately re-render the page?
     componentDidMount = () => {
         fetch('/Home/List').then(response => {
             if (response.ok) {
                 return response.json();
             } else {
-                throw new Error("Unable to fetch /Home/List");
+                throw new Error("Unable to fetch /Home/List (" + response.status + ")", response.statusText);
             }
         }).then(responseData => {
             console.log("Rune data: ");
@@ -31,17 +28,6 @@ export default class RuneList extends React.Component {
                 rune_data: responseData
             });
         })
-    }
-
-    // If the label already exists, remove the checkbox from the list of selected boxes. Otherwise, add the label.
-    toggleCheckbox = runeName => {
-        if (this.selectedCheckboxes.has(runeName)) {
-            console.log("Unchecking " + runeName)
-            this.selectedCheckboxes.delete(runeName);
-        } else {
-            console.log("Checking " + runeName)
-            this.selectedCheckboxes.add(runeName);
-        }
     }
 
     handleFormSubmit = formSubmitEvent => {
@@ -60,8 +46,7 @@ export default class RuneList extends React.Component {
                 console.log("Search response OKAY!")
                 return response.json();
             } else {
-                console.log("Search failed!")
-                // TODO display error?
+                throw new Error("Failed to complete runeword search (" + response.status + ")", response.statusText)
             }
         }).then(responseData => {
           console.log("Runeword data: ");
@@ -72,35 +57,40 @@ export default class RuneList extends React.Component {
         })
     }
 
-    createCheckboxes = () => (
-        this.state.rune_data.map(rune =>
-          <Checkbox rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
-        )
-    )
+    // If the label already exists, remove the checkbox from the list of selected boxes. Otherwise, add the label.
+    toggleCheckbox = runeName => {
+        this.selectedCheckboxes.has(runeName) ?
+            this.selectedCheckboxes.delete(runeName) : this.selectedCheckboxes.add(runeName);
+    }
+
+    renderRuneOptions = () => {
+        if (this.state.rune_data !== null) {
+            return this.state.rune_data.map(
+                rune => <Rune rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
+            )
+        }
+        // TODO Swap load out: https://codepen.io/Manoz/pen/pydxK/
+        return (<p>Loading runes...</p>);
+    }
 
     renderRunewordResults = () => {
-        if (this.state.runeword_data !== null && this.state.runeword_data !== undefined) {
-            return this.state.runeword_data.map(runeword => <Runeword runeword={runeword}></Runeword>)
+        if (this.state.runeword_data !== null) {
+            return this.state.runeword_data.map(
+                runeword => <Runeword runeword={runeword}></Runeword>
+            )
         }
 
         return (<span>Waiting for runeword search...</span>);
     }
 
     render() {
-        console.log("STATE ready = " + (this.state.rune_data !== null && this.state.rune_data !== undefined));
         return (
             <div id="runes-grid">
                 <div id="rune-options">
                     <p> Fill out runes form:</p>
                     <form onSubmit={this.handleFormSubmit}>
-                        {
-                            (this.state.rune_data !== null && this.state.rune_data !== undefined) ?
-                                this.createCheckboxes() :
-                                <p>Loading runes...</p>
-                        }
+                        { this.renderRuneOptions() }
                         <button type="submit">Save</button>
-                        <br />
-                        <br />
                     </form>
                 </div>
                 <div id="runeword-results">

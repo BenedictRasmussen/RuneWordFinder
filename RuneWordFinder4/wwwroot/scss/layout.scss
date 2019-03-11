@@ -14,16 +14,6 @@ body {
     height: inherit;
 }
 
-.container-grid {
-    height: inherit;
-    display: grid;
-    grid-template-areas:
-        'header'
-        'content'
-        'footer';
-    grid-template-rows: 3rem 1fr 2rem;
-}
-
 #header {
     grid-area: header;
     background-color: maroon;
@@ -38,6 +28,16 @@ body {
 #footer {
     grid-area: footer;
     background-color: slategrey;
+}
+
+.container-grid {
+    height: inherit;
+    display: grid;
+    grid-template-areas:
+        'header'
+        'content'
+        'footer';
+    grid-template-rows: 3rem 1fr 2rem;
 }
 
 /* Rune checkboxes */

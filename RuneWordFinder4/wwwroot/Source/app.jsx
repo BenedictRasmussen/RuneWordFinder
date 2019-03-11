@@ -1,12 +1,12 @@
 ﻿import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import RuneWordFinder from './runeWordFinder.jsx';
+import RuneWordFinder from './main.jsx';
 
 import '../scss/layout.scss';
 
 ReactDOM.render(
-    <RuneWordFinder />,
+    <Main />,
     document.getElementById('runewordapp')
 );
 
