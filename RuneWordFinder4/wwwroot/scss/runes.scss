@@ -7,9 +7,11 @@
 
 #rune-options {
     grid-column: 2;
+    overflow-y: auto;
 }
 
 #runeword-results {
     grid-column: 3;
     background-color: lightgray;
+    overflow-y: auto;
 }
