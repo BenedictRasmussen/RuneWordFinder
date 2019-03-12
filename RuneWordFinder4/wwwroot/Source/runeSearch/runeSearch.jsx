@@ -22,8 +22,6 @@ export default class RuneList extends React.Component {
                 throw new Error("Unable to fetch /Home/List (" + response.status + ")", response.statusText);
             }
         }).then(responseData => {
-            console.log("Rune data: ");
-            console.log(responseData);
             this.setState({
                 rune_data: responseData
             });
