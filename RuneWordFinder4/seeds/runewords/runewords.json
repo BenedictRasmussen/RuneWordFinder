@@ -70,7 +70,7 @@
     "name": "Honor",
     "version": "original",
     "type": "Melee Weapons",
-    "runes": [ "Amn", "El", "Ith", "Tir", "Sol" ],
+    "runes": [ "amn", "el", "ith", "tir", "sol" ],
     "stats": [
       "+160% Enhanced Damage",
       "+9 To Minimum Damage",
@@ -89,7 +89,7 @@
     "name": "King's Grace",
     "version": "original",
     "type": "Swords/Scepters",
-    "runes": [ "Amn", "Ral", "Thul" ],
+    "runes": [ "amn", "ral", "thul" ],
     "stats": [
       "+100% Enhanced Damage",
       "+100% Damage To Demons",
@@ -204,7 +204,7 @@
     "name": "Nadir",
     "version": "original",
     "type": "Staves",
-    "runes": [ "lum", "io", "sol", "eth" ],
+    "runes": [ "nef", "tir" ],
     "stats": [
       "+50% Enhanced Defense",
       "+10 Defense",
