@@ -83,7 +83,6 @@ export default class RuneList extends React.Component {
         return (
             <div id="runes-grid">
                 <div id="rune-options">
-                    <p>Fill out runes form:</p>
                     <form onSubmit={this.handleFormSubmit}>
                         { this.renderRuneOptions() }
                         <button id="search-submit" type="submit">Save</button>
