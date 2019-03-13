@@ -15,14 +15,14 @@ const Runes = props => {
                 <h3>Runes lvl 1 - 21</h3>
                 {
                     runeGroupA.map(rune =>
-                           <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox } key={ rune.name }></Rune>)
+                           <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox }></Rune>)
                 }
             </div>
             <div className="rune-col">
                 <h3 >Runes lvl 22 - 41</h3>
                 {
                     runeGroupB.map(rune =>
-                            <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox } key={ rune.name }></Rune>)
+                            <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox }></Rune>)
                 }
             </div>
         </div>
@@ -31,14 +31,14 @@ const Runes = props => {
                 <h3>Runes lvl 42 - 61</h3>
                 {
                     runeGroupC.map(rune =>
-                            <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox } key={ rune.name }></Rune>)
+                            <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox }></Rune>)
                 }
             </div>
             <div className="rune-col">
                 <h3>Runes lvl 61+</h3>
                 {
                     runeGroupD.map(rune =>
-                            <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox } key={ rune.name }></Rune>)
+                            <Rune rune={ rune } handleCheckboxChange={ props.toggleCheckbox }></Rune>)
                 }
             </div>
         </div>
