@@ -1125,75 +1125,220 @@
     ]
   },
   {
-    "name": "",
+    "name": "Lawbringer",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Swords/Hammers/Scepters",
+    "runes": [ "amn", "lem", "ko" ],
     "stats": [
-
+        "20% Chance To Cast Level 15 Decrepify On Striking",
+        "Level 16-18 Sanctuary Aura When Equipped (varies)",
+        "-50% Target Defense",
+        "Adds 150-210 Fire Damage",
+        "Adds 130-180 Cold Damage",
+        "7% Life Stolen Per Hit",
+        "Slain Monsters Rest In Peace",
+        "+200-250 Defense Vs. Missile (varies)",
+        "+10 To Dexterity",
+        "75% Extra Gold From Monsters"
     ]
   },
   {
-    "name": "",
+    "name": "Oath",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Swords/Axes/Maces",
+    "runes": [ "shael", "pul", "mal", "lum" ],
     "stats": [
-
+        "30% Chance To Cast Level 20 Bone Spirit On Striking",
+        "Indestructible",
+        "+50% Increased Attack Speed",
+        "+210-340% Enhanced Damage (varies)",
+        "+75% Damage To Demons",
+        "+100 To Attack Rating Against Demons",
+        "Prevent Monster Heal",
+        "+10 To Energy",
+        "+10-15 Magic Absorb (varies)",
+        "Level 16 Heart Of Wolverine (20 Charges)",
+        "Level 17 Iron Golem (14 Charges)"
     ]
   },
   {
-    "name": "",
+    "name": "Obedience",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Polearms",
+    "runes": [ "hel", "ko", "thul", "eth", "fal" ],
     "stats": [
-
+        "30% Chance To Cast Level 21 Enchant When You Kill An Enemy",
+        "40% Faster Hit Recovery",
+        "+370% Enhanced Damage",
+        "-25% Target Defense",
+        "Adds 3-14 Cold Damage 3 Second Duration (Normal)",
+        "-25% To Enemy Fire Resistance",
+        "40% Chance of Crushing Blow",
+        "+200-300 Defense (varies)",
+        "+10 To Strength",
+        "+10 To Dexterity",
+        "All Resistances +20-30 (varies)",
+        "Requirements -20%"
     ]
   },
   {
-    "name": "",
+    "name": "Phoenix",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Weapons",
+    "runes": [ "vex", "vex", "lo", "jah" ],
     "stats": [
-
+        "100% Chance To Cast level 40 Blaze When You Level-up",
+        "40% Chance To Cast Level 22 Firestorm On Striking",
+        "Level 10-15 Redemption Aura When Equipped (varies)",
+        "+350-400% Enhanced Damage (varies)",
+        "Ignores Target's Defense",
+        "14% Mana Stolen Per Hit",
+        "-28% To Enemy Fire Resistance",
+        "20% Deadly Strike",
+        "+350-400 Defense Vs. Missile (varies)",
+        "+15-21 Fire Absorb (varies)"
     ]
   },
   {
-    "name": "",
+    "name": "Phoenix",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Shields",
+    "runes": [ "vex", "vex", "lo", "jah" ],
     "stats": [
-
+        "100% Chance To Cast level 40 Blaze When You Level-up",
+        "40% Chance To Cast Level 22 Firestorm On Striking",
+        "Level 10-15 Redemption Aura When Equipped (varies)",
+        "+350-400 Defense Vs. Missile (varies)",
+        "+350-400% Enhanced Damage (varies)",
+        "-28% To Enemy Fire Resistance",
+        "+50 To Life",
+        "+5% To Maximum Lightning Resist",
+        "+10% To Maximum Fire Resist",
+        "+15-21 Fire Absorb (varies)"
     ]
   },
   {
-    "name": "",
+    "name": "Pride",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Polearms/Scepters",
+    "runes": [ "cham", "sur", "io", "lo" ],
     "stats": [
-
+        "25% Chance To Cast Level 17 Fire Wall When Struck",
+        "Level 16-20 Concentration Aura When Equipped (varies)",
+        "260-300% Bonus To Attack Rating (varies)",
+        "+1-99% Damage To Demons (Based on Character Level)",
+        "Adds 50-280 Lightning Damage",
+        "20% Deadly Strike",
+        "Hit Blinds Target",
+        "Freezes Target +3",
+        "+10 To Vitality",
+        "Replenish Life +8",
+        "1.875-185.625% Extra Gold From Monsters (Based on Character Level)"
     ]
   },
   {
-    "name": "",
+    "name": "Rift",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Polearms/Scepters",
+    "runes": [ "hel", "ko", "lem", "gul" ],
     "stats": [
-
+        "20% Chance To Cast Level 16 Tornado On Striking",
+        "16% Chance To Cast Level 21 Frozen Orb On Attack",
+        "20% Bonus To Attack Rating",
+        "Adds 160-250 Magic Damage",
+        "Adds 60-180 Fire Damage",
+        "+5-10 To All Stats (varies)",
+        "+10 To Dexterity",
+        "38% Damage Taken Goes To Mana",
+        "75% Extra Gold From Monsters",
+        "Level 15 Iron Maiden (40 Charges)",
+        "Requirements -20%"
     ]
   },
   {
-    "name": "",
+    "name": "Spirit",
     "version": "1.10 Ladder",
-    "type": "",
-    "runes": [  ],
+    "type": "Swords",
+    "runes": [ "tal", "thul", "ort", "amn" ],
     "stats": [
-
+        "+2 To All Skills",
+        "+25-35% Faster Cast Rate (varies)",
+        "+55% Faster Hit Recovery",
+        "Adds 1-50 Lightning Damage",
+        "Adds 3-14 Cold Damage 3 Second Duration (Normal)",
+        "+75 Poison Damage Over 5 Seconds",
+        "7% Life Stolen Per Hit",
+        "+250 Defense Vs. Missile",
+        "+22 To Vitality",
+        "+89-112 To Mana (varies)",
+        "+3-8 Magic Absorb (varies)"
     ]
   },
+  {
+    "name": "Spirit",
+    "version": "1.10 Ladder",
+    "type": "Shields",
+    "runes": [ "tal", "thul", "ort", "amn" ],
+    "stats": [
+        "+2 To All Skills",
+        "+25-35% Faster Cast Rate (varies)",
+        "+55% Faster Hit Recovery",
+        "+250 Defense Vs. Missile",
+        "+22 To Vitality",
+        "+89-112 To Mana (varies)",
+        "Cold Resist +35%",
+        "Lightning Resist +35%",
+        "Poison Resist +35%",
+        "+3-8 Magic Absorb (varies)",
+        "Attacker Takes Damage of 14"
+    ]
+  },
+  {
+    "name": "Voice of Reason",
+    "version": "1.10 Ladder",
+    "type": "Swords/Maces",
+    "runes": [ "lem", "ko", "el", "eld" ],
+    "stats": [
+        "15% Chance To Cast Level 13 Frozen Orb On Striking",
+        "18% Chance To Cast Level 20 Ice Blast On Striking",
+        "+50 To Attack Rating",
+        "+220-350% Damage To Demons",
+        "+355-375% Damage To Undead (varies)",
+        "+50 To Attack Rating Against Undead",
+        "Adds 100-220 Cold Damage",
+        "-24% To Enemy Cold Resistance",
+        "+10 To Dexterity",
+        "Cannot Be Frozen",
+        "75% Extra Gold From Monsters",
+        "+1 To Light Radius"
+    ]
+  },
+  {
+    "name": "Wrath",
+    "version": "1.10 Ladder",
+    "type": "Missile Weapons",
+    "runes": [ "pul", "lum", "ber", "mal" ],
+    "stats": [
+        "30% Chance To Cast Level 1 Decrepify On Striking",
+        "5% Chance To Cast Level 10 Life Tap On Striking",
+        "+375% Damage To Demons",
+        "+100 To Attack Rating Against Demons",
+        "+250-300% Damage To Undead (varies)",
+        "Adds 85-120 Magic Damage",
+        "Adds 41-240 Lightning Damage",
+        "20% Chance of Crushing Blow",
+        "Prevent Monster Heal",
+        "+10 To Energy",
+        "Cannot Be Frozen"
+    ]
+    },
+    {
+      "name": "",
+      "version": "1.11 Ladder",
+      "type": "",
+      "runes": [  ],
+      "stats": [
+
+      ]
+    }
 ]
