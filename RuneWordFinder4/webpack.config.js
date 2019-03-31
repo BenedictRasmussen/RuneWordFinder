@@ -5,12 +5,15 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const extractCSS = new ExtractTextPlugin('allstyles.css');
 
 module.exports = {
+
     entry: { 'main': './wwwroot/source/app.jsx' },
     output: {
         path: path.resolve(__dirname, 'wwwroot/dist'),
         filename: 'bundle.js',
         publicPath: 'dist/'
     },
+
+    mode: 'development',
 
     plugins: [
         extractCSS,

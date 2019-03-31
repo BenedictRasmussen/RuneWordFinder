@@ -1,5 +1,8 @@
-﻿#runes-grid {
+@import "variables";
+
+#runes-grid {
     display: grid;
+    grid-row: 2;
     // col 1 and 4 used to create margins
     grid-template-columns: 10rem 1fr 1fr 10rem;
     height: 100%;
@@ -7,9 +10,38 @@
 
 #rune-options {
     grid-column: 2;
+    overflow-y: auto;
+    margin-right: 3rem;
 }
 
 #runeword-results {
     grid-column: 3;
-    background-color: lightgray;
+    background-color: $d2-tan;
+    color: black;
+    overflow-y: auto;
+    padding-left: 1rem;
+}
+
+#search-submit {
+    margin-top: 2rem;
+}
+
+.runeword {
+    & h1 {
+        text-decoration: underline;
+    }
+}
+
+.rune-col {
+    flex-basis: 100%;
+    background-color: black;
+    color: $d2-tan;
+    margin: 0 1rem 1rem 0;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+.rune-row {
+    display: flex;
+    flex-direction: row;
 }

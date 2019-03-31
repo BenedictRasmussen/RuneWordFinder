@@ -1,5 +1,5 @@
 ﻿import * as React from 'react';
-import Rune from './rune.jsx';
+import Runes from './runes.jsx';
 import Runeword from './runeword.jsx'
 
 import '../../scss/runes.scss';
@@ -22,8 +22,6 @@ export default class RuneList extends React.Component {
                 throw new Error("Unable to fetch /Home/List (" + response.status + ")", response.statusText);
             }
         }).then(responseData => {
-            console.log("Rune data: ");
-            console.log(responseData);
             this.setState({
                 rune_data: responseData
             });
@@ -65,9 +63,7 @@ export default class RuneList extends React.Component {
 
     renderRuneOptions = () => {
         if (this.state.rune_data !== null) {
-            return this.state.rune_data.map(
-                rune => <Rune rune={rune} handleCheckboxChange={this.toggleCheckbox} key={rune.name} />
-            )
+            return <Runes runes={ this.state.rune_data } toggleCheckbox={ this.toggleCheckbox }></Runes>;
         }
         // TODO Swap load out: https://codepen.io/Manoz/pen/pydxK/
         return (<p>Loading runes...</p>);
@@ -80,17 +76,16 @@ export default class RuneList extends React.Component {
             )
         }
 
-        return (<span>Waiting for runeword search...</span>);
+        return <span>Waiting for runeword search...</span>;
     }
 
     render() {
         return (
             <div id="runes-grid">
                 <div id="rune-options">
-                    <p> Fill out runes form:</p>
                     <form onSubmit={this.handleFormSubmit}>
                         { this.renderRuneOptions() }
-                        <button type="submit">Save</button>
+                        <button id="search-submit" type="submit">Save</button>
                     </form>
                 </div>
                 <div id="runeword-results">

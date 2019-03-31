@@ -14,12 +14,8 @@ namespace RuneWordFinder4.Models
         public string Version { get; set; }
         [BsonElement("type")]
         public string Type { get; set; }
-        [BsonElement("runeName")]
-        public string RuneName { get; set; }
         [BsonElement("runes")]
         public IEnumerable<string> Runes { get; set; }
-        [BsonElement("sockets")]
-        public int Sockets { get; set; }
         [BsonElement("stats")]
         public IEnumerable<string> Stats { get; set; }
     }
