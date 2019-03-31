@@ -1,3 +1,5 @@
+@import "variables";
+
 ﻿/* Generic page layout */
 * {
     box-sizing: border-box;
@@ -8,6 +10,16 @@ body {
     width: 100vw;
     overflow: hidden;
     margin: 0;
+    background: $d2-red-dark;
+}
+
+a {
+    &:visited {
+        color: $d2-tan-dark;
+    }
+    &:hover {
+        color: $d2-tan-dark;
+    }
 }
 
 #runewordapp {
@@ -16,8 +28,9 @@ body {
 
 #header {
     grid-area: header;
-    background-color: maroon;
-    color: white;
+    background-color: black;
+    padding-left: 2rem;
+    color: $d2-tan;
 }
 
 #content {
@@ -27,7 +40,10 @@ body {
 
 #footer {
     grid-area: footer;
-    background-color: slategrey;
+    background-color: black;
+    padding-top: .5rem;
+    padding-left: 2rem;
+    color: $d2-tan;
 }
 
 .container-grid {
