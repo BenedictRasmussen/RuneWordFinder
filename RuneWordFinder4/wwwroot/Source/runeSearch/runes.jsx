@@ -19,7 +19,7 @@ const Runes = props => {
                 }
             </div>
             <div className="rune-col">
-                <h3 >Runes lvl 19 - 39</h3>
+                <h3>Runes lvl 19 - 39</h3>
                 {
                     runeGroupB.map(rune =>
                             <Rune rune={ rune } key={ rune.name } handleCheckboxChange={ props.toggleCheckbox }></Rune>)
