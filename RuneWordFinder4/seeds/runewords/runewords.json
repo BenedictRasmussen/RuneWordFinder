@@ -1395,7 +1395,7 @@
       "name": "Principle",
       "version": "1.11 Ladder",
       "type": "Armor",
-      "runes": [ "ral", "gul", "el" ],
+      "runes": [ "ral", "gul", "eld" ],
       "stats": [
           "100% Chance To Cast Level 5 Holy Bolt On Striking",
           "+2 To Paladin Skill Levels",
