@@ -1333,12 +1333,107 @@
     ]
     },
     {
-      "name": "",
+      "name": "Bone",
       "version": "1.11 Ladder",
-      "type": "",
-      "runes": [  ],
+      "type": "Armor",
+      "runes": [ "sol", "um", "um" ],
       "stats": [
-
+          "15% Chance To Cast level 10 Bone Armor When Struck",
+          "15% Chance To Cast level 10 Bone Spear On Striking",
+          "+2 To Necromancer Skill Levels",
+          "+100-150 To Mana (varies)",
+          "All Resistances +30",
+          "Damage Reduced By 7"
+      ]
+    },
+    {
+      "name": "Enlightenment",
+      "version": "1.11 Ladder",
+      "type": "Armor",
+      "runes": [ "pul", "ral", "sol" ],
+      "stats": [
+          "5% Chance To Cast Level 15 Blaze When Struck",
+          "5% Chance To Cast level 15 Fire Ball On Striking",
+          "+2 To Sorceress Skill Levels",
+          "+1 To Warmth",
+          "+30% Enhanced Defense",
+          "Fire Resist +30%",
+          "Damage Reduced By 7"
+      ]
+    },
+    {
+      "name": "Myth",
+      "version": "1.11 Ladder",
+      "type": "Armor",
+      "runes": [ "hel", "amn", "nef" ],
+      "stats": [
+          "3% Chance To Cast Level 1 Howl When Struck",
+          "10% Chance To Cast Level 1 Taunt On Striking",
+          "+2 To Barbarian Skill Levels",
+          "+30 Defense Vs. Missile",
+          "Replenish Life +10",
+          "Attacker Takes Damage of 14",
+          "Requirements -15%"
+      ]
+    },
+    {
+      "name": "Peace",
+      "version": "1.11 Ladder",
+      "type": "Armor",
+      "runes": [ "shael", "thul", "amn" ],
+      "stats": [
+          "4% Chance To Cast Level 5 Slow Missiles When Struck",
+          "2% Chance To Cast level 15 Valkyrie On Striking",
+          "+2 To Amazon Skill Levels",
+          "+20% Faster Hit Recovery",
+          "+2 To Critical Strike",
+          "Cold Resist +30%",
+          "Attacker Takes Damage of 14"
+      ]
+    },
+    {
+      "name": "Principle",
+      "version": "1.11 Ladder",
+      "type": "Armor",
+      "runes": [ "ral", "gul", "eld" ],
+      "stats": [
+          "100% Chance To Cast Level 5 Holy Bolt On Striking",
+          "+2 To Paladin Skill Levels",
+          "+50% Damage to Undead",
+          "+100-150 To Life (varies)",
+          "15% Slower Stamina Drain",
+          "+5% To Maximum Poison Resist",
+          "Fire Resist +30%"
+      ]
+    },
+    {
+      "name": "Rain",
+      "version": "1.11 Ladder",
+      "type": "Armor",
+      "runes": [ "ort", "mal", "ith" ],
+      "stats": [
+          "5% Chance To Cast Level 15 Cyclone Armor When Struck",
+          "5% Chance To Cast Level 15 Twister On Striking",
+          "+2 To Druid Skills",
+          "+100-150 To Mana (varies)",
+          "Lightning Resist +30%",
+          "Magic Damage Reduced By 7",
+          "15% Damage Taken Goes to Mana"
+      ]
+    },
+    {
+      "name": "Treachery",
+      "version": "1.11 Ladder",
+      "type": "Armor",
+      "runes": [ "shael", "thul", "lem" ],
+      "stats": [
+          "5% Chance To Cast Level 15 Fade When Struck",
+          "25% Chance To Cast level 15 Venom On Striking",
+          "+2 To Assassin Skills",
+          "+45% Increased Attack Speed",
+          "+20% Faster Hit Recovery",
+          "Cold Resist +30%",
+          "50% Extra Gold From Monsters"
       ]
     }
 ]
