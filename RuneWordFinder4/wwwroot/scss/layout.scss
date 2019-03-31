@@ -36,6 +36,9 @@ a {
 #content {
     grid-area: content;
     overflow: auto;
+    display: grid;
+    // Rows 1 and 3 used for margins
+    grid-template-rows: 2rem 1fr 2rem;
 }
 
 #footer {

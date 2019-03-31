@@ -2,10 +2,10 @@
 
 #runes-grid {
     display: grid;
+    grid-row: 2;
     // col 1 and 4 used to create margins
     grid-template-columns: 10rem 1fr 1fr 10rem;
     height: 100%;
-    padding-top: 2rem;
 }
 
 #rune-options {
@@ -16,7 +16,6 @@
 
 #runeword-results {
     grid-column: 3;
-    height: 90%;
     background-color: $d2-tan;
     color: black;
     overflow-y: auto;
@@ -27,11 +26,17 @@
     margin-top: 2rem;
 }
 
+.runeword {
+    & h1 {
+        text-decoration: underline;
+    }
+}
+
 .rune-col {
     flex-basis: 100%;
     background-color: black;
     color: $d2-tan;
-    margin: 1rem;
+    margin: 0 1rem 1rem 0;
     padding-left: 2rem;
     padding-bottom: 1rem;
 }
