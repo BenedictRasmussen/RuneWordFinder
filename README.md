@@ -1,5 +1,5 @@
 # RuneWordFinder
-A toy application for discovering which Runewords can be made in Diablo II.
+A simple application for discovering which Runewords can be made in Diablo II.
 
 ## What and Why?
 
@@ -14,11 +14,19 @@ As the player progresses through the game, the player can amass a large number o
 ## Stack
 **Front**: React
 
-**Back**: C#
+**Back**: Python
 
 **Database**: Mongo
 
-**Framework**: ASP.Net
+**Framework**: Flask
+
+## Setting up envrionment
+Python **3+** and Node must be installed.
+
+```
+npm install
+pip install flask
+```
 
 ## Seeding Mongo
 This project uses the [mongo-seeding](https://github.com/pkosiec/mongo-seeding "mongo-seeding github") repository to seed the database. The repository has a gob of features, but this project specifically takes advantage of the [cli sub repository](https://github.com/pkosiec/mongo-seeding/tree/master/cli "mongo-seeding-cli github").
@@ -26,4 +34,4 @@ This project uses the [mongo-seeding](https://github.com/pkosiec/mongo-seeding "
 If you wish to seed the database programatically, there are some known issues getting webpack to package mongoose, another populer Mongo package that mongo-seeding relies on. Spend time at your own risk.
 
 ### Seeding local instance
-To seed a local instance of Mongo, run `npm run seed-db` to run a predefined seeding command. If you are using non-default configurations for your mongo instance (e.g. not using port 27017), you will need to peruse the documentation for mongo-seeding-cli at the link above and modify the command in `package.json`.
+It is assumed if you are seeding a local instance of Mongo, you already have installed Mongo. To seed a local instance of Mongo, run `npm run seed-db` to run a predefined seeding command. If you are using non-default configurations for your mongo instance (e.g. not using port 27017), you will need to peruse the documentation for mongo-seeding-cli at the link above and modify the command in `package.json`.
