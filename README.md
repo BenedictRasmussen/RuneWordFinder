@@ -35,3 +35,17 @@ If you wish to seed the database programatically, there are some known issues ge
 
 ### Seeding local instance
 It is assumed if you are seeding a local instance of Mongo, you already have installed Mongo. To seed a local instance of Mongo, run `npm run seed-db` to run a predefined seeding command. If you are using non-default configurations for your mongo instance (e.g. not using port 27017), you will need to peruse the documentation for mongo-seeding-cli at the link above and modify the command in `package.json`.
+
+## Running locally
+### Linux
+On Linux, run the setup shell script, then use `flask` to start the development server.
+```
+> . bin/setup.sh
+> flask run
+```
+### Windows
+On Windows, run the setup powershell script, then use `flask` to start the development server.
+```
+> .\bin\setup.ps1
+> flask run
+```
