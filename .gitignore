@@ -1,3 +1,4 @@
 # Custom ignored files
 __pycache__
 node_modules/
+runewordFinder/static/dist/
