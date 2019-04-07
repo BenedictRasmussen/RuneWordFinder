@@ -21,11 +21,12 @@ As the player progresses through the game, the player can amass a large number o
 **Framework**: Flask
 
 ## Setting up envrionment
-Python **3+** and Node must be installed.
+Python **3+** and Node must be installed. Additionally, this project utilizes `pipenv` (optional but strongly encouraged.)
 
 ```
 npm install
-pip install flask
+pip install pipenv
+pipenv install
 ```
 
 ## Seeding Mongo
@@ -41,11 +42,13 @@ It is assumed if you are seeding a local instance of Mongo, you already have ins
 On Linux, run the setup shell script, then use `flask` to start the development server.
 ```
 > . bin/setup.sh
+> pipenv shell
 > flask run
 ```
 ### Windows
 On Windows, run the setup powershell script, then use `flask` to start the development server.
 ```
 > .\bin\setup.ps1
+> pipenv shell
 > flask run
 ```
