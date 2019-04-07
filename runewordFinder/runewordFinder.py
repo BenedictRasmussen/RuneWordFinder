@@ -7,4 +7,6 @@ def hello():
     return render_template('index.html')
 
 if __name__ == "__main__":
+    # TODO this obviously needs changed for prod
+    app.debug = True
     app.run()
