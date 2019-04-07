@@ -6,10 +6,10 @@ const extractCSS = new ExtractTextPlugin('allstyles.css');
 
 module.exports = {
 
-    entry: { 'main': './wwwroot/source/app.jsx' },
+    entry: { 'main': './runewordFinder/source/jsx/app.jsx' },
     output: {
-        path: path.resolve(__dirname, 'wwwroot/dist'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, './runewordFinder/static/dist'),
+        filename: 'index.js',
         publicPath: 'dist/'
     },
 
