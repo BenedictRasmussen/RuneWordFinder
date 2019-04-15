@@ -10,4 +10,4 @@ ReactDOM.render(
     document.getElementById('runewordapp')
 );
 
-module.hot.accept();
+//module.hot.accept();

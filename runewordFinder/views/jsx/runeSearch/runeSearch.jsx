@@ -1,6 +1,7 @@
 ﻿import * as React from 'react';
 import Runes from './runes.jsx';
 import Runeword from './runeword.jsx'
+import axios from 'axios'
 
 import '../../scss/runes.scss';
 
@@ -15,42 +16,23 @@ export default class RuneList extends React.Component {
     }
 
     componentDidMount = () => {
-        fetch('/Home/List').then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("Unable to fetch /Home/List (" + response.status + ")", response.statusText);
-            }
-        }).then(responseData => {
+        axios.get('/api/v1/runes').then(response => {
             this.setState({
-                rune_data: responseData
+                rune_data: response.data
             });
+        }).catch(error => {
+            console.log("Failed to fetch runes:" + error)
         })
     }
 
     handleFormSubmit = formSubmitEvent => {
         formSubmitEvent.preventDefault();
-        console.log("Sending for search: " + JSON.stringify(Array.from(this.selectedCheckboxes)));
 
-        // https://stackoverflow.com/questions/44925223/how-to-pass-data-to-controller-using-fetch-api-in-asp-net-core
-        fetch('/Home/Search', {
-            method: 'post',
-            headers: {
-                "Content-Type": "application/json; charset=utf-8"
-            },
-            body: JSON.stringify(Array.from(this.selectedCheckboxes))
+        axios.post('/api/v1/runewordSearch', {
+            runes: Array.from(this.selectedCheckboxes)
         }).then(response => {
-            if (response.ok) {
-                console.log("Search response OKAY!")
-                return response.json();
-            } else {
-                throw new Error("Failed to complete runeword search (" + response.status + ")", response.statusText)
-            }
-        }).then(responseData => {
-          console.log("Runeword data: ");
-          console.log(responseData);
           this.setState({
-              runeword_data: responseData
+              runeword_data: response.data
           })
         })
     }

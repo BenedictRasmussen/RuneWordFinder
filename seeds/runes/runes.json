@@ -1,7 +1,7 @@
 [
   {
     "name": "el",
-    "image": "images/runes/el.png",
+    "image": "static/images/runes/el.png",
     "alt-text": "El rune",
     "weapon": "+50 to attack rating, +1 to light radius",
     "armor": "+1 to light radius",
@@ -10,7 +10,7 @@
   },
   {
     "name": "eld",
-    "image": "images/runes/eld.png",
+    "image": "static/images/runes/eld.png",
     "alt-text": "Eld rune",
     "weapon": "+75% damage vs Undead",
     "armor": "15% lower stamina drain",
@@ -19,7 +19,7 @@
   },
   {
     "name": "tir",
-    "image": "images/runes/tir.png",
+    "image": "static/images/runes/tir.png",
     "alt-text": "Tir rune",
     "weapon": "+2 mana after each kill",
     "armor": "+2 mana after each kill",
@@ -28,7 +28,7 @@
   },
   {
     "name": "nef",
-    "image": "images/runes/nef.png",
+    "image": "static/images/runes/nef.png",
     "alt-text": "Nef rune",
     "weapon": "Knockback",
     "armor": "+30 defense vs missile",
@@ -37,7 +37,7 @@
   },
   {
     "name": "eth",
-    "image": "images/runes/eth.png",
+    "image": "static/images/runes/eth.png",
     "alt-text": "Eth rune",
     "weapon": "-25% To Target Defense",
     "armor": "Regenerate Mana 15%",
@@ -46,7 +46,7 @@
   },
   {
     "name": "ith",
-    "image": "images/runes/ith.png",
+    "image": "static/images/runes/ith.png",
     "alt-text": "Ith rune",
     "weapon": "+9 To Maximum Damage",
     "armor": "15% Damage Taken Goes to Mana",
@@ -55,7 +55,7 @@
   },
   {
     "name": "tal",
-    "image": "images/runes/tal.png",
+    "image": "static/images/runes/tal.png",
     "alt-text": "Tal rune",
     "weapon": "+75 Poison Damage Over 5 Seconds",
     "armor": "Poison Resist 30%",
@@ -64,7 +64,7 @@
   },
   {
     "name": "ral",
-    "image": "images/runes/ral.png",
+    "image": "static/images/runes/ral.png",
     "alt-text": "Ral rune",
     "weapon": "Adds 5-30 Fire Damage",
     "armor": "Fire Resist 30%",
@@ -73,7 +73,7 @@
   },
   {
     "name": "ort",
-    "image": "images/runes/ort.png",
+    "image": "static/images/runes/ort.png",
     "alt-text": "ort rune",
     "weapon": "Adds 1-50 Lightning Damage",
     "armor": "Lightning Resist 30%",
@@ -82,7 +82,7 @@
   },
   {
     "name": "thul",
-    "image": "images/runes/thul.png",
+    "image": "static/images/runes/thul.png",
     "alt-text": "Thul rune",
     "weapon": "Adds 3-14 Cold Damage - 3 Second Duration",
     "armor": "Cold Resist 30%",
@@ -91,7 +91,7 @@
   },
   {
     "name": "amn",
-    "image": "images/runes/amn.png",
+    "image": "static/images/runes/amn.png",
     "alt-text": "Amn rune",
     "weapon": "7% Life Stolen Per Hit",
     "armor": "Attacker Takes Damage of 14",
@@ -100,7 +100,7 @@
   },
   {
     "name": "sol",
-    "image": "images/runes/sol.png",
+    "image": "static/images/runes/sol.png",
     "alt-text": "Sol rune",
     "weapon": "+9 To Minimum Damage",
     "armor": "Damage Reduced By 7",
@@ -109,7 +109,7 @@
   },
   {
     "name": "shael",
-    "image": "images/runes/shael.png",
+    "image": "static/images/runes/shael.png",
     "alt-text": "Shael rune",
     "weapon": "20% Increased Attack Speed",
     "armor": "20% Faster Hit Recovery/",
@@ -118,7 +118,7 @@
   },
   {
     "name": "dol",
-    "image": "images/runes/dol.png",
+    "image": "static/images/runes/dol.png",
     "alt-text": "Dol rune",
     "weapon": "Hit Causes Monster To Flee 25%",
     "armor": "Replenish Life +7",
@@ -127,7 +127,7 @@
   },
   {
     "name": "hel",
-    "image": "images/runes/hel.png",
+    "image": "static/images/runes/hel.png",
     "alt-text": "Hel rune",
     "weapon": "Requirements -20%",
     "armor": "Requirements -15%",
@@ -136,7 +136,7 @@
   },
   {
     "name": "io",
-    "image": "images/runes/io.png",
+    "image": "static/images/runes/io.png",
     "alt-text": "Io rune",
     "weapon": "+10 To Vitality",
     "armor": "+10 To Vitality",
@@ -145,7 +145,7 @@
   },
   {
     "name": "lum",
-    "image": "images/runes/lum.png",
+    "image": "static/images/runes/lum.png",
     "alt-text": "Lum rune",
     "weapon": "+10 To Energy",
     "armor": "+10 To Energy",
@@ -154,7 +154,7 @@
   },
   {
     "name": "ko",
-    "image": "images/runes/ko.png",
+    "image": "static/images/runes/ko.png",
     "alt-text": "Ko rune",
     "weapon": "+10 To Dexterity",
     "armor": "+10 To Dexterity",
@@ -163,7 +163,7 @@
   },
   {
     "name": "fal",
-    "image": "images/runes/fal.png",
+    "image": "static/images/runes/fal.png",
     "alt-text": "Fal rune",
     "weapon": "+10 To Strength",
     "armor": "+10 To Strength",
@@ -172,7 +172,7 @@
   },
   {
     "name": "lem",
-    "image": "images/runes/lem.png",
+    "image": "static/images/runes/lem.png",
     "alt-text": "Lem rune",
     "weapon": "75% Extra Gold From Monsters",
     "armor": "50% Extra Gold From Monsters",
@@ -181,7 +181,7 @@
   },
   {
     "name": "pul",
-    "image": "images/runes/pul.png",
+    "image": "static/images/runes/pul.png",
     "alt-text": "Pul rune",
     "weapon": "+75% Damage To Demons, +100 Attack Rating Against Demons",
     "armor": "+30% Enhanced Defense",
@@ -190,7 +190,7 @@
   },
   {
     "name": "um",
-    "image": "images/runes/um.png",
+    "image": "static/images/runes/um.png",
     "alt-text": "Um rune",
     "weapon": "25% Chance of Open Wounds",
     "armor": "All Resistances +15",
@@ -199,7 +199,7 @@
   },
   {
     "name": "mal",
-    "image": "images/runes/mal.png",
+    "image": "static/images/runes/mal.png",
     "alt-text": "Mal rune",
     "weapon": "Prevent Monster Heal",
     "armor": "Magic Damage Reduced By 7",
@@ -208,7 +208,7 @@
   },
   {
     "name": "ist",
-    "image": "images/runes/ist.png",
+    "image": "static/images/runes/ist.png",
     "alt-text": "Ist rune",
     "weapon": "30% Better Chance of Getting Magic Items",
     "armor": "25% Better Chance of Getting Magic Items",
@@ -217,7 +217,7 @@
   },
   {
     "name": "gul",
-    "image": "images/runes/gul.png",
+    "image": "static/images/runes/gul.png",
     "alt-text": "Gul rune",
     "weapon": "20% Bonus To Attack Rating",
     "armor": "5% To Maximum Poison Resist",
@@ -226,7 +226,7 @@
   },
   {
     "name": "vex",
-    "image": "images/runes/vex.png",
+    "image": "static/images/runes/vex.png",
     "alt-text": "Vex rune",
     "weapon": "7% Mana Stolen Per Hit",
     "armor": "5% To Maximum Fire Resist",
@@ -235,7 +235,7 @@
   },
   {
     "name": "ohm",
-    "image": "images/runes/ohm.png",
+    "image": "static/images/runes/ohm.png",
     "alt-text": "Ohm rune",
     "weapon": "+50% Enhanced Damage",
     "armor": "5% To Maximum Cold Resist",
@@ -244,7 +244,7 @@
   },
   {
     "name": "lo",
-    "image": "images/runes/lo.png",
+    "image": "static/images/runes/lo.png",
     "alt-text": "Lo rune",
     "weapon": "20% Deadly Strike",
     "armor": "5% To Maximum Lightning Resist",
@@ -253,7 +253,7 @@
   },
   {
     "name": "sur",
-    "image": "images/runes/sur.png",
+    "image": "static/images/runes/sur.png",
     "alt-text": "Sur rune",
     "weapon": "Hit Blinds Target",
     "armor": "Maximum Mana 5%",
@@ -262,7 +262,7 @@
   },
   {
     "name": "ber",
-    "image": "images/runes/ber.png",
+    "image": "static/images/runes/ber.png",
     "alt-text": "Ber rune",
     "weapon": "20% Chance of Crushing Blow",
     "armor": "Damage Reduced by 8%",
@@ -271,7 +271,7 @@
   },
   {
     "name": "jah",
-    "image": "images/runes/jah.png",
+    "image": "static/images/runes/jah.png",
     "alt-text": "Jah rune",
     "weapon": "Ignore Target's Defense",
     "armor": "Increase Maximum Life 5%",
@@ -280,7 +280,7 @@
   },
   {
     "name": "cham",
-    "image": "images/runes/cham.png",
+    "image": "static/images/runes/cham.png",
     "alt-text": "Cham rune",
     "weapon": "Freeze Target +3",
     "armor": "Cannot Be Frozen",
@@ -289,7 +289,7 @@
   },
   {
     "name": "zod",
-    "image": "images/runes/zod.png",
+    "image": "static/images/runes/zod.png",
     "alt-text": "Zod rune",
     "weapon": "Indestructible",
     "armor": "Indestructible",
