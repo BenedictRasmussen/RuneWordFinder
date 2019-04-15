@@ -17,7 +17,6 @@ export default class RuneList extends React.Component {
 
     componentDidMount = () => {
         axios.get('/api/v1/runes').then(response => {
-            console.log("RESPONSE_DATA: " + response.data)
             this.setState({
                 rune_data: response.data
             });
@@ -28,14 +27,10 @@ export default class RuneList extends React.Component {
 
     handleFormSubmit = formSubmitEvent => {
         formSubmitEvent.preventDefault();
-        console.log("Sending for search: " + JSON.stringify(Array.from(this.selectedCheckboxes)));
 
         axios.post('/api/v1/runewordSearch', {
-            headers: {
-                "Content-Type": "application/json; charset=utf-8"
-            }
+            runes: Array.from(this.selectedCheckboxes)
         }).then(response => {
-          console.log("Runeword data: " + response.data);
           this.setState({
               runeword_data: response.data
           })
@@ -49,7 +44,6 @@ export default class RuneList extends React.Component {
     }
 
     renderRuneOptions = () => {
-        console.log("RUNE_DATA: " + this.state.rune_data)
         if (this.state.rune_data !== null) {
             return <Runes runes={ this.state.rune_data } toggleCheckbox={ this.toggleCheckbox }></Runes>;
         }
