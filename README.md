@@ -20,7 +20,9 @@ As the player progresses through the game, the player can amass a large number o
 
 **Framework**: Flask
 
-## Setting up envrionment
+# Setup
+
+## Setting up Local envrionment
 Python **3+** and Node must be installed. Additionally, this project utilizes `pipenv` (optional but strongly encouraged.)
 
 ```
@@ -49,6 +51,13 @@ On Linux, run the setup shell script, then use `flask` to start the development 
 On Windows, run the setup powershell script, then use `flask` to start the development server.
 ```
 > .\bin\setup.ps1
-> pipenv shell
+> pipenv shelleb setenv AWS_SECRET_ACCESS_KEY=
 > flask run
+```
+
+## Elastic Beanstalk
+```
+$ eb setenv AWS_ACCESS_KEY_ID=<public-key>
+  ...
+$eb setenv AWS_SECRET_ACCESS_KEY=<private-key>
 ```

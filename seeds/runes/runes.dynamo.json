@@ -1,0 +1,32 @@
+{
+    "runes": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"N": "1"},
+                    "name": {"S": "el"},
+                    "image": {"S": "static/images/runes/el.png"},
+                    "alt-text": {"S": "El rune"},
+                    "weapon": {"S": "+50 to attack rating, +1 to light radius"},
+                    "armor": {"S": "+1 to light radius"},
+                    "shield": {"S": "Fire resist 35%"},
+                    "level": {"N": "11"}
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "id": {"N": "2"},
+                    "name": {"S": "eld"},
+                    "image": {"S": "static/images/runes/eld.png"},
+                    "alt-text": {"S": "Eld rune"},
+                    "weapon": {"S": "+75% damage vs Undead"},
+                    "armor": {"S": "15% lower stamina drain"},
+                    "shield": {"S": "7% increased chance of blocking"},
+                    "level": {"N": "11"}
+                }
+            }
+        }
+    ]
+}

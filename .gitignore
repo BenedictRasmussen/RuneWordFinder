@@ -2,3 +2,8 @@
 __pycache__
 node_modules/
 runewordFinder/static/dist/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

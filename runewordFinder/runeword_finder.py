@@ -3,6 +3,8 @@ from models.runes import find_runes
 from models.runewords import find_runewords
 
 app = Flask(__name__)
+# Expected by Elastic Beanstalk
+application = app
 
 # index returns the root html
 @app.route("/")
@@ -12,7 +14,7 @@ def index():
 # runes returns all runes from the database
 @app.route("/api/v1/runes")
 def runes():
-    return find_runes()
+    return find_runes(request)
 
 # runeword_search returns a list of runewords that may be made with the runes provided in the body of the request
 @app.route("/api/v1/runewordSearch", methods=['POST'])

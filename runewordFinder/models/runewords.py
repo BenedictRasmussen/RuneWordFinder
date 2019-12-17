@@ -1,10 +1,10 @@
 import json
 from flask import request
-from models.mongoWrapper import Database
+from models.database_wrapper import database
 from bson.json_util import dumps
 
 def find_runewords(request):
-    runewords = Database().runewords.find()
+    runewords = database(request).find_runewords()
     userRunes = json.loads(str(request.data, 'utf-8'))['runes']
     matchedRunewords = []
 
